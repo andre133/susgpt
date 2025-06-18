@@ -71,7 +71,7 @@
       ctx.font = 'bold 26px Arial';
       ctx.textAlign = 'center';
       const cnsFormatado = cns.replace(/(.{3})(.{4})(.{4})(.{4})/, "$1   $2   $3   $4");
-      ctx.fillText(cnsFormatado, 595, 130);
+      ctx.fillText(cnsFormatado, 595, 115);
 
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       JsBarcode(svg, cns, { format: "CODE128", width: 2, height: 60, displayValue: false, margin: 0 });
@@ -79,7 +79,7 @@
       const imgBarra = new Image();
       imgBarra.src = 'data:image/svg+xml;base64,' + btoa(svgData);
       await new Promise(res => imgBarra.onload = res);
-      ctx.drawImage(imgBarra, 470, 145);
+      ctx.drawImage(imgBarra, 470, 125);
 
       document.getElementById('downloadPDF').disabled = false;
     }
