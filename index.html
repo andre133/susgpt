@@ -278,14 +278,14 @@
       ctx.drawImage(bg, 0, 0, 800, 271);
 
       ctx.fillStyle = 'black';
-      ctx.font = 'bold 13px Arial';
+      ctx.font = 'bold 12px Arial';
       ctx.fillText(nome.toUpperCase(), 465, 57);
-      ctx.font = 'bold 13px Arial';
+      ctx.font = 'bold 12px Arial';
       ctx.fillText(`Data Nasc.: ${data.split('-').reverse().join('/')}`, 465, 80);
       ctx.fillText(`Sexo: ${sexo}`, 675, 80);
       ctx.font = 'bold 26px Gotham';
       ctx.textAlign = 'center';
-      const cnsFormatado = cns.replace(/(.{3})(.{4})(.{4})(.{4})/, "$1  $2  $3  $4");
+      const cnsFormatado = cns.replace(/(.{3})(.{4})(.{4})(.{4})/, "$1   $2   $3   $4");
       ctx.fillText(cnsFormatado, 595, 110);
 
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
